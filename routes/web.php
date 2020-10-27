@@ -61,3 +61,7 @@ Route::get('/batch', function () {
 
     return $batch->id;
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
